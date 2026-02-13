@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgis/postgis:15-3.3
+    container_name: tarrina-postgres
+    environment:
+      POSTGRES_DB: tarrina_orders
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5432:5432"
+
+  app:
+    build: .
+    container_name: order-assignment-service
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/tarrina_orders
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: root
+      GOOGLE_MAPS_API_KEY: dummy-key-for-now
+    ports:
+      - "8080:8080"
