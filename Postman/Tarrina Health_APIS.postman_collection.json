@@ -1,0 +1,1797 @@
+{
+  "info": {
+    "_postman_id": "ce5d9df1-a4ad-429b-8c48-7541e1051cca",
+    "name": "Tarrina Health_APIS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "12963525"
+  },
+  "item": [
+    {
+      "name": "Order Management API",
+      "item": [
+        {
+          "name": "Create Order",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"contactId\": 1,\n  \"deliveryAddress\": \"MG Road, Bangalore\",\n  \"deliveryLatitude\": 12.9716,\n  \"deliveryLongitude\": 77.5946,\n  \"priority\": \"high\",\n  \"orderItems\": {\n    \"items\": [\n      {\n        \"name\": \"Paracetamol 500mg\",\n        \"qty\": 10,\n        \"type\": \"medicine\",\n        \"price\": 25.50\n      },\n      {\n        \"name\": \"Cough Syrup\",\n        \"qty\": 2,\n        \"type\": \"medicine\",\n        \"price\": 120.00\n      },\n      {\n        \"name\": \"Vitamin C Tablets\",\n        \"qty\": 5,\n        \"type\": \"supplement\",\n        \"price\": 180.00\n      }\n    ],\n    \"pharmacy\": \"Apollo Pharmacy\",\n    \"prescriptionRequired\": false\n  }\n}\n"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "orders"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Order",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"contactId\": 1,\n  \"deliveryAddress\": \"MG Road, Bangalore\",\n  \"deliveryLatitude\": 12.9716,\n  \"deliveryLongitude\": 77.5946,\n  \"priority\": \"high\",\n  \"orderItems\": {\n    \"items\": [\n      {\n        \"name\": \"Paracetamol 500mg\",\n        \"qty\": 10,\n        \"type\": \"medicine\",\n        \"price\": 25.50\n      },\n      {\n        \"name\": \"Cough Syrup\",\n        \"qty\": 2,\n        \"type\": \"medicine\",\n        \"price\": 120.00\n      },\n      {\n        \"name\": \"Vitamin C Tablets\",\n        \"qty\": 5,\n        \"type\": \"supplement\",\n        \"price\": 180.00\n      }\n    ],\n    \"pharmacy\": \"Apollo Pharmacy\",\n    \"prescriptionRequired\": false\n  }\n}\n"
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/orders",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "orders"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 10 Feb 2026 13:59:08 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 4,\n    \"uuid\": \"7eddf133-601c-4826-8c76-6313ac198ba6\",\n    \"status\": \"received\",\n    \"assignedPartnerUserId\": null\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Order By ID",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/orders/4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "orders",
+                "4"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Order By ID",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/orders/4",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "orders",
+                    "4"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 10 Feb 2026 14:13:10 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 4,\n    \"uuid\": \"7eddf133-601c-4826-8c76-6313ac198ba6\",\n    \"status\": \"received\",\n    \"assignedPartnerUserId\": null,\n    \"deliveryAddress\": \"MG Road, Bangalore\",\n    \"deliveryLatitude\": 12.9716,\n    \"deliveryLongitude\": 77.5946,\n    \"priority\": \"high\",\n    \"createdAt\": \"2026-02-10T19:29:07.212292\",\n    \"assignedAt\": null\n}"
+            }
+          ]
+        },
+        {
+          "name": "List Orders (All)",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/orders?page=0&size=10",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "orders"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "List Orders (All)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/orders?page=0&size=10",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "orders"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "0"
+                    },
+                    {
+                      "key": "size",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 10 Feb 2026 14:16:00 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"content\": [\n        {\n            \"id\": 4,\n            \"uuid\": \"7eddf133-601c-4826-8c76-6313ac198ba6\",\n            \"status\": \"received\",\n            \"assignedPartnerUserId\": null\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"sort\": {\n            \"empty\": true,\n            \"sorted\": false,\n            \"unsorted\": true\n        },\n        \"offset\": 0,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"last\": true,\n    \"totalPages\": 1,\n    \"totalElements\": 1,\n    \"first\": true,\n    \"size\": 10,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": true,\n        \"sorted\": false,\n        \"unsorted\": true\n    },\n    \"numberOfElements\": 1,\n    \"empty\": false\n}"
+            }
+          ]
+        },
+        {
+          "name": "List Orders By Status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/orders?status=received&page=0&size=10",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "orders"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "received"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "List Orders By Status",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/orders?status=received&page=0&size=10",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "orders"
+                  ],
+                  "query": [
+                    {
+                      "key": "status",
+                      "value": "received"
+                    },
+                    {
+                      "key": "page",
+                      "value": "0"
+                    },
+                    {
+                      "key": "size",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 10 Feb 2026 14:20:34 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"content\": [\n        {\n            \"id\": 4,\n            \"uuid\": \"7eddf133-601c-4826-8c76-6313ac198ba6\",\n            \"status\": \"received\",\n            \"assignedPartnerUserId\": null\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"sort\": {\n            \"empty\": true,\n            \"sorted\": false,\n            \"unsorted\": true\n        },\n        \"offset\": 0,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"last\": true,\n    \"totalPages\": 1,\n    \"totalElements\": 1,\n    \"first\": true,\n    \"size\": 10,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": true,\n        \"sorted\": false,\n        \"unsorted\": true\n    },\n    \"numberOfElements\": 1,\n    \"empty\": false\n}"
+            }
+          ]
+        },
+        {
+          "name": "List Orders By Contact",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/orders?contactId=1&page=0&size=10",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "orders"
+              ],
+              "query": [
+                {
+                  "key": "contactId",
+                  "value": "1"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "List Orders By Contact",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/orders?contactId=1&page=0&size=10",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "orders"
+                  ],
+                  "query": [
+                    {
+                      "key": "contactId",
+                      "value": "1"
+                    },
+                    {
+                      "key": "page",
+                      "value": "0"
+                    },
+                    {
+                      "key": "size",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 10 Feb 2026 14:21:05 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"content\": [\n        {\n            \"id\": 4,\n            \"uuid\": \"7eddf133-601c-4826-8c76-6313ac198ba6\",\n            \"status\": \"received\",\n            \"assignedPartnerUserId\": null\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"sort\": {\n            \"empty\": true,\n            \"sorted\": false,\n            \"unsorted\": true\n        },\n        \"offset\": 0,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"last\": true,\n    \"totalPages\": 1,\n    \"totalElements\": 1,\n    \"first\": true,\n    \"size\": 10,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": true,\n        \"sorted\": false,\n        \"unsorted\": true\n    },\n    \"numberOfElements\": 1,\n    \"empty\": false\n}"
+            }
+          ]
+        },
+        {
+          "name": "List Orders By Partner",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/orders?partnerId=1&page=0&size=10",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "orders"
+              ],
+              "query": [
+                {
+                  "key": "partnerId",
+                  "value": "1"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "List Orders By Partner",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/orders?partnerId=1&page=0&size=10",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "orders"
+                  ],
+                  "query": [
+                    {
+                      "key": "partnerId",
+                      "value": "1"
+                    },
+                    {
+                      "key": "page",
+                      "value": "0"
+                    },
+                    {
+                      "key": "size",
+                      "value": "10"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 10 Feb 2026 14:21:31 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"content\": [],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"sort\": {\n            \"empty\": true,\n            \"sorted\": false,\n            \"unsorted\": true\n        },\n        \"offset\": 0,\n        \"paged\": true,\n        \"unpaged\": false\n    },\n    \"last\": true,\n    \"totalPages\": 0,\n    \"totalElements\": 0,\n    \"first\": true,\n    \"size\": 10,\n    \"number\": 0,\n    \"sort\": {\n        \"empty\": true,\n        \"sorted\": false,\n        \"unsorted\": true\n    },\n    \"numberOfElements\": 0,\n    \"empty\": true\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Order Status → Delivered",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/orders/4/status?status=delivered",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "orders",
+                "4",
+                "status"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "delivered"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Order Status → Delivered",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/orders/4/status?status=delivered",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "orders",
+                    "4",
+                    "status"
+                  ],
+                  "query": [
+                    {
+                      "key": "status",
+                      "value": "delivered"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 10 Feb 2026 14:39:15 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 4,\n    \"previousStatus\": \"dispatched\",\n    \"currentStatus\": \"delivered\",\n    \"changedAt\": \"2026-02-10T20:09:15.012679700\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Order Status → Assigned",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/orders/4/status?status=assigned",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "orders",
+                "4",
+                "status"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "assigned"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Order Status → Dispatched",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/orders/4/status?status=dispatched",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "orders",
+                "4",
+                "status"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "dispatched"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Order Status → Dispatched",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/orders/4/status?status=dispatched",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "orders",
+                    "4",
+                    "status"
+                  ],
+                  "query": [
+                    {
+                      "key": "status",
+                      "value": "dispatched"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 10 Feb 2026 14:37:54 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 4,\n    \"previousStatus\": \"assigned\",\n    \"currentStatus\": \"dispatched\",\n    \"changedAt\": \"2026-02-10T20:07:54.813818900\"\n}"
+            }
+          ]
+        }
+      ],
+      "description": "Order Management Api"
+    },
+    {
+      "name": "Delivery  Partner API",
+      "item": [
+        {
+          "name": "Register Partner",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": 2,\n  \"vehicleType\": \"BIKE\",\n  \"vehicleNumber\": \"KA01AB1234\",\n  \"vehicleRegistration\": {\n    \"rc\": \"ABC123\"\n  },\n  \"maxOrdersPerDay\": 5,\n  \"currentLatitude\": 12.9721,\n  \"currentLongitude\": 77.5933,\n  \"serviceZones\": [\n    {\"zone\": \"east\"}\n  ],\n  \"metadata\": {\n    \"foo\": \"bar\"\n  }\n}\n"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/partners",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "partners"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Register Partner",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"userId\": 2,\n  \"vehicleType\": \"BIKE\",\n  \"vehicleNumber\": \"KA01AB1234\",\n  \"vehicleRegistration\": {\n    \"rc\": \"ABC123\"\n  },\n  \"maxOrdersPerDay\": 5,\n  \"currentLatitude\": 12.9721,\n  \"currentLongitude\": 77.5933,\n  \"serviceZones\": [\n    {\"zone\": \"east\"}\n  ],\n  \"metadata\": {\n    \"foo\": \"bar\"\n  }\n}\n"
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/partners",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "partners"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 10 Feb 2026 17:40:24 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 3,\n    \"userId\": 2,\n    \"userName\": \"Delivery tarinna Boy 4\",\n    \"vehicleType\": \"BIKE\",\n    \"availabilityStatus\": \"available\",\n    \"currentActiveOrders\": 0,\n    \"maxOrdersPerDay\": 5,\n    \"lastStatusUpdate\": \"2026-02-10T23:10:24.775092\",\n    \"vehicleRegistration\": \"{\\\"rc\\\":\\\"ABC123\\\"}\",\n    \"serviceZones\": [\n        {\n            \"zone\": \"east\"\n        }\n    ],\n    \"vehicleNumber\": \"KA01AB1234\",\n    \"currentLatitude\": 12.9721,\n    \"currentLongitude\": 77.5933\n}"
+            }
+          ]
+        },
+        {
+          "name": "List All Partners",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/partners",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "partners"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "List All Partners",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/partners",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "partners"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 10 Feb 2026 17:41:40 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 1,\n        \"userId\": 1,\n        \"userName\": \"Delivery Boy 3\",\n        \"vehicleType\": \"BIKE\",\n        \"availabilityStatus\": \"available\",\n        \"currentActiveOrders\": 0,\n        \"maxOrdersPerDay\": 5,\n        \"lastStatusUpdate\": \"2026-02-10T21:49:16.60691\",\n        \"vehicleRegistration\": \"{\\\"rc\\\": \\\"ABC123\\\"}\",\n        \"serviceZones\": \"[{\\\"zone\\\":\\\"east\\\"}]\",\n        \"vehicleNumber\": \"KA01AB1234\",\n        \"currentLatitude\": null,\n        \"currentLongitude\": null\n    },\n    {\n        \"id\": 3,\n        \"userId\": 2,\n        \"userName\": \"Delivery tarinna Boy 4\",\n        \"vehicleType\": \"BIKE\",\n        \"availabilityStatus\": \"available\",\n        \"currentActiveOrders\": 0,\n        \"maxOrdersPerDay\": 5,\n        \"lastStatusUpdate\": \"2026-02-10T23:10:24.775092\",\n        \"vehicleRegistration\": \"{\\\"rc\\\": \\\"ABC123\\\"}\",\n        \"serviceZones\": [\n            {\n                \"zone\": \"east\"\n            }\n        ],\n        \"vehicleNumber\": \"KA01AB1234\",\n        \"currentLatitude\": 12.9721,\n        \"currentLongitude\": 77.5933\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Filter by service zone",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/partners?zone=east",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "partners"
+              ],
+              "query": [
+                {
+                  "key": "zone",
+                  "value": "east"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Filter by service zone",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/partners?zone=east",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "partners"
+                  ],
+                  "query": [
+                    {
+                      "key": "zone",
+                      "value": "east"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 11 Feb 2026 06:04:54 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 1,\n        \"userId\": 1,\n        \"userName\": \"Delivery Boy 3\",\n        \"vehicleType\": \"BIKE\",\n        \"vehicleNumber\": \"KA01AB1234\",\n        \"vehicleRegistration\": \"{\\\"rc\\\": \\\"ABC123\\\"}\",\n        \"availabilityStatus\": \"available\",\n        \"currentActiveOrders\": 0,\n        \"maxOrdersPerDay\": 5,\n        \"lastStatusUpdate\": \"2026-02-10T21:49:16.60691\",\n        \"serviceZones\": \"[{\\\"zone\\\":\\\"east\\\"}]\",\n        \"metadata\": \"{\\\"foo\\\":\\\"bar\\\"}\",\n        \"currentLatitude\": null,\n        \"currentLongitude\": null,\n        \"locationUpdatedAt\": null,\n        \"totalDeliveries\": null,\n        \"successfulDeliveries\": null,\n        \"failedDeliveries\": null,\n        \"averageDeliveryTimeMinutes\": null,\n        \"rating\": null,\n        \"onLeaveUntil\": null,\n        \"leaveReason\": null,\n        \"createdAt\": \"2026-02-10T21:49:16.734121\",\n        \"updatedAt\": \"2026-02-10T21:49:16.734121\"\n    },\n    {\n        \"id\": 3,\n        \"userId\": 2,\n        \"userName\": \"Delivery tarinna Boy 4\",\n        \"vehicleType\": \"BIKE\",\n        \"vehicleNumber\": \"KA01AB1234\",\n        \"vehicleRegistration\": \"{\\\"rc\\\": \\\"ABC123\\\"}\",\n        \"availabilityStatus\": \"available\",\n        \"currentActiveOrders\": 0,\n        \"maxOrdersPerDay\": 5,\n        \"lastStatusUpdate\": \"2026-02-10T23:10:24.775092\",\n        \"serviceZones\": [\n            {\n                \"zone\": \"east\"\n            }\n        ],\n        \"metadata\": {\n            \"foo\": \"bar\"\n        },\n        \"currentLatitude\": 12.9721,\n        \"currentLongitude\": 77.5933,\n        \"locationUpdatedAt\": \"2026-02-10T23:10:24.776496\",\n        \"totalDeliveries\": null,\n        \"successfulDeliveries\": null,\n        \"failedDeliveries\": null,\n        \"averageDeliveryTimeMinutes\": null,\n        \"rating\": null,\n        \"onLeaveUntil\": null,\n        \"leaveReason\": null,\n        \"createdAt\": \"2026-02-10T23:10:24.776496\",\n        \"updatedAt\": \"2026-02-10T23:10:24.776496\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Get Partner by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/partners/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "partners",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Partner Availability",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"on_leave\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/partners/1/availability",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "partners",
+                "1",
+                "availability"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Assigned Orders for Partner",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/partners/1/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "partners",
+                "1",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List Available Partners",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/partners?status=available",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "partners"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "available"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Combine filter",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": [
+            {
+              "name": "New Request",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/partners?status=available&zone=east&lat=12.97&lng=77.59",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "partners"
+                  ],
+                  "query": [
+                    {
+                      "key": "status",
+                      "value": "available"
+                    },
+                    {
+                      "key": "zone",
+                      "value": "east"
+                    },
+                    {
+                      "key": "lat",
+                      "value": "12.97"
+                    },
+                    {
+                      "key": "lng",
+                      "value": "77.59"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 11 Feb 2026 06:35:05 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 3,\n        \"userId\": 2,\n        \"userName\": \"Delivery tarinna Boy 4\",\n        \"vehicleType\": \"BIKE\",\n        \"vehicleNumber\": \"KA01AB1234\",\n        \"vehicleRegistration\": \"{\\\"rc\\\": \\\"ABC123\\\"}\",\n        \"availabilityStatus\": \"available\",\n        \"currentActiveOrders\": 0,\n        \"maxOrdersPerDay\": 5,\n        \"lastStatusUpdate\": \"2026-02-10T23:10:24.775092\",\n        \"serviceZones\": [\n            {\n                \"zone\": \"east\"\n            }\n        ],\n        \"metadata\": {\n            \"foo\": \"bar\"\n        },\n        \"currentLatitude\": 12.9721,\n        \"currentLongitude\": 77.5933,\n        \"locationUpdatedAt\": \"2026-02-10T23:10:24.776496\",\n        \"totalDeliveries\": null,\n        \"successfulDeliveries\": null,\n        \"failedDeliveries\": null,\n        \"averageDeliveryTimeMinutes\": null,\n        \"rating\": null,\n        \"onLeaveUntil\": null,\n        \"leaveReason\": null,\n        \"createdAt\": \"2026-02-10T23:10:24.776496\",\n        \"updatedAt\": \"2026-02-10T23:10:24.776496\"\n    }\n]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Contact_User_location",
+      "item": [
+        {
+          "name": "Service_Zone",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"zoneName\": \"east\",\r\n  \"wktPolygon\": \"POLYGON((77.40 12.80, 77.80 12.80, 77.80 13.20, 77.40 13.20, 77.40 12.80))\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/service-zones",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "service-zones"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Service_Zone",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"zoneName\": \"east\",\r\n  \"wktPolygon\": \"POLYGON((77.40 12.80, 77.80 12.80, 77.80 13.20, 77.40 13.20, 77.40 12.80))\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/service-zones",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "service-zones"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 12 Feb 2026 05:15:09 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 3,\n    \"uuid\": \"62692ed6-2e9b-43f4-8d66-76e3096e9e05\",\n    \"zoneName\": \"east\",\n    \"boundaryWkt\": \"POLYGON ((77.4 12.8, 77.8 12.8, 77.8 13.2, 77.4 13.2, 77.4 12.8))\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Filter by location",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/partners?lat=12.97&lng=77.59&radiusKm=5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "partners"
+              ],
+              "query": [
+                {
+                  "key": "lat",
+                  "value": "12.97"
+                },
+                {
+                  "key": "lng",
+                  "value": "77.59"
+                },
+                {
+                  "key": "radiusKm",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Filter by location",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/partners?lat=12.97&lng=77.59&radiusKm=5",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "partners"
+                  ],
+                  "query": [
+                    {
+                      "key": "lat",
+                      "value": "12.97"
+                    },
+                    {
+                      "key": "lng",
+                      "value": "77.59"
+                    },
+                    {
+                      "key": "radiusKm",
+                      "value": "5"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Wed, 11 Feb 2026 06:32:38 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": 3,\n        \"userId\": 2,\n        \"userName\": \"Delivery tarinna Boy 4\",\n        \"vehicleType\": \"BIKE\",\n        \"vehicleNumber\": \"KA01AB1234\",\n        \"vehicleRegistration\": \"{\\\"rc\\\": \\\"ABC123\\\"}\",\n        \"availabilityStatus\": \"available\",\n        \"currentActiveOrders\": 0,\n        \"maxOrdersPerDay\": 5,\n        \"lastStatusUpdate\": \"2026-02-10T23:10:24.775092\",\n        \"serviceZones\": [\n            {\n                \"zone\": \"east\"\n            }\n        ],\n        \"metadata\": {\n            \"foo\": \"bar\"\n        },\n        \"currentLatitude\": 12.9721,\n        \"currentLongitude\": 77.5933,\n        \"locationUpdatedAt\": \"2026-02-10T23:10:24.776496\",\n        \"totalDeliveries\": null,\n        \"successfulDeliveries\": null,\n        \"failedDeliveries\": null,\n        \"averageDeliveryTimeMinutes\": null,\n        \"rating\": null,\n        \"onLeaveUntil\": null,\n        \"leaveReason\": null,\n        \"createdAt\": \"2026-02-10T23:10:24.776496\",\n        \"updatedAt\": \"2026-02-10T23:10:24.776496\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "createcontact",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"12255\",\r\n  \"phone\": \"9923007897\",\r\n  \"email\": \"t23i@gmail.com\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/contacts",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "contacts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CreateUser",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Delivery Boy 4\",\r\n  \"email\": \"partner22@gmail.com\",\r\n  \"password\": \"secret\",\r\n  \"latitude\": 12.9721,\r\n  \"longitude\": 77.5933,\r\n  \"roleId\":2\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "users"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "CreateUser",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"kerala\",\r\n  \"email\": \"kerala@gmail.com\",\r\n  \"password\": \"passtt\",\r\n  \"latitude\": 12.9721,\r\n  \"longitude\": 77.5933,\r\n  \"roleId\":2\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/users",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "users"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 13 Feb 2026 03:57:48 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"id\": 22,\n    \"uuid\": \"bf2f1416-ee5e-4ca0-b4a4-1c4d0770c32a\",\n    \"name\": \"kerala\",\n    \"email\": \"kerala@gmail.com\",\n    \"password\": \"passtt\",\n    \"firstName\": null,\n    \"lastName\": null,\n    \"salutation\": null,\n    \"address\": null,\n    \"streetAddress\": null,\n    \"city\": null,\n    \"state\": null,\n    \"country\": null,\n    \"pincode\": null,\n    \"roleId\": 2,\n    \"department\": null,\n    \"designation\": null,\n    \"dateOfJoining\": null,\n    \"monthlyTarget\": null,\n    \"status\": \"active\",\n    \"isDeactivated\": null,\n    \"lastLogin\": null,\n    \"lastTrackedAt\": null,\n    \"hasActiveSession\": null,\n    \"applicationSettings\": null,\n    \"communicationPreferences\": null,\n    \"metadata\": null,\n    \"createdAt\": \"2026-02-13T09:27:48.2605593\",\n    \"updatedAt\": null,\n    \"deletedAt\": null\n}"
+            }
+          ]
+        },
+        {
+          "name": "Servicezone_linkPartner",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Assignment &Reassignment APIS",
+      "item": [
+        {
+          "name": "Assign Order (Auto Assignment)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"orderId\": 7\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/assignments/assign",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "assignments",
+                "assign"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Assign Order (Auto Assignment)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"orderId\": 5\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/v1/assignments/assign",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "v1",
+                    "assignments",
+                    "assign"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 12 Feb 2026 15:07:39 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"orderId\": 5,\n    \"partnerUserId\": 3,\n    \"distanceKm\": 0.1514,\n    \"score\": 0.69480632273753688,\n    \"reason\": \"ASSIGNED_SUCCESSFULLY\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Unassigned Orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/assignments/unassigned",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "assignments",
+                "unassigned"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reassign Order",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/assignments/reassign/7?reason=partner_unavailable",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "assignments",
+                "reassign",
+                "7"
+              ],
+              "query": [
+                {
+                  "key": "reason",
+                  "value": "partner_unavailable"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
